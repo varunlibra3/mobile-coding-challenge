@@ -31,9 +31,18 @@ class PhotoDetailFragment : Fragment() {
         binding.pager.adapter = adapter
 
         binding.pager.post {
-            binding.pager.setCurrentItem(args.photoPos, false)
+            savedInstanceState?.let {
+                binding.pager.setCurrentItem(it.getInt("lastPos", args.photoPos), false)
+            } ?: let {
+                binding.pager.setCurrentItem(args.photoPos, false)
+            }
         }
 
         return binding.root
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putInt("lastPos", binding.pager.currentItem) //saving last photo position in case of orientation change
     }
 }
