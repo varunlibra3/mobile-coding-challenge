@@ -1,3 +1,6 @@
+## To Run:
+Open gradle.properties and add your Unsplash API key for 'unsplash_access_key'
+
 # Mobile Developer Coding Challenge
 
 This is a coding challenge for prospective mobile developer applicants applying through http://work.traderev.com/
