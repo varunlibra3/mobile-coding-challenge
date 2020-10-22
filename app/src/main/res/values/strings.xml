@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">TradeRevCoding</string>
+    <string name="photo_grid">Photo Grid</string>
+    <string name="photo_detail">Photo Detail</string>
+    <string name="error_occurred">Error occured</string>
+    <string name="internet_not_connected">Internet not connected</string>
+</resources>
